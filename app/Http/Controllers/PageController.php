@@ -21,11 +21,11 @@ class PageController extends Controller
         return view('main', compact('maincat'));
     }
     public function sub(Category $id) {
-        $subcat = App\SubCategory::all();
+        $subcat = App\SubCategory::where('cat_id', $id->id)->get();
         return view('sub', compact('id', 'subcat'));
     }
     public function prod(SubCategory $id) {
-        $subcat = App\Product::all();
-        return view('prod', compact('id', 'subcat'));
+        $subcat = App\Product::where('sub_id', $id->id)->get();
+        return view('sub', compact('id', 'subcat'));
     }
 }

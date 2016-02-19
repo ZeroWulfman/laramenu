@@ -10,13 +10,17 @@
 
     @foreach($subcat as $cat)
 
-        @if($cat->cat_id == $id->id)
+
             <div class="col-sm-6">
-                <a href="/prod/{{$cat->id}}">
-                <img class="img-responsive" src="{{$cat->image}}" alt="">
-                <h3>{{$cat->title}}</h3>
-                </a>
+                @if($cat->cat_id)
+                    <a href="/prod/{{$cat->id}}">
+                @endif
+                    <img class="img-responsive" src="{{$cat->image}}" alt="">
+                    <h3>{{$cat->title}}</h3>
+                @if($cat->cat_id)
+                    </a>
+                @endif
             </div>
-        @endif
+
     @endforeach
 @endsection
