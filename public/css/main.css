@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+    font-family: 'Lato';
+    font-weight: 400;
+}
+h1 {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+button {
+    float: right;
+    display: inline-block;
+    position: relative;
+    top: 25px;
+}
