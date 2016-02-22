@@ -7,11 +7,11 @@
 
 
 @section('content')
-
+    <!-- Loops through Table to grab id, image location, and title -->
     @foreach($subcat as $cat)
 
-
             <div class="col-sm-6">
+                <!-- Products page doesn't need anchor -->
                 @if($cat->cat_id)
                     <a href="/prod/{{$cat->id}}">
                 @endif

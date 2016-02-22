@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    
+    <!-- Loops through Table to grab id, image location, and title -->
     @foreach($maincat as $cat)
         <div class="col-sm-6">
                 <a href="/sub/{{$cat->id}}">

@@ -13,6 +13,7 @@ class CreateCatTable extends Migration
     public function up()
     {
         Schema::create('categories', function (Blueprint $table) {
+            // Set up Categories Table
             $table->increments('id');
             $table->string('title');
             $table->string('image');

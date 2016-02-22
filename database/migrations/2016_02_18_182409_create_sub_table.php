@@ -14,6 +14,7 @@ class CreateSubTable extends Migration
     {
         Schema::create('subcategories', function (Blueprint $table) {
             $table->increments('id');
+            /* Set up connection to Categories Table*/
             $table->integer('cat_id')->unsigned()->index();
             $table->string('title');
             $table->string('image');
