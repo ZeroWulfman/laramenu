@@ -12,11 +12,9 @@
 
             <div class="col-sm-6">
                 <!-- Products page doesn't need anchor -->
-                    <a href="/prod/{{$cat->id}}">
                     <img class="img-responsive" src="{{$cat->image}}" alt="">
                     <h3>{{$cat->title}}</h3>
-                    </a>
-                    {!! Form::open(['method' => 'POST', 'route' => ['subdeath', $cat->id], 'onsubmit' => 'return ConfirmDelete()']) !!}
+                    {!! Form::open(['method' => 'POST', 'route' => ['itemdeath', $cat->id]]) !!}
                     {!! csrf_field() !!}
                     {!! method_field('DELETE') !!}
                     {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', array('type' => 'submit', 'class' => 'btn btn-danger delete')) !!}

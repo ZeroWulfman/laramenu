@@ -15,6 +15,9 @@ Route::get('/', 'PageController@main');
 Route::get('sub/{id}', 'PageController@sub');
 Route::get('prod/{id}', 'PageController@prod');
 
+Route::delete('item/{id}', ['uses' => 'DeleteController@pdestroy', 'as' => 'itemdeath']);
+Route::delete('subitem/{id}', ['uses' => 'DeleteController@sdestroy', 'as' => 'subdeath']);
+Route::delete('catitem/{id}', ['uses' => 'DeleteController@cdestroy', 'as' => 'catdeath']);
 /*
 |--------------------------------------------------------------------------
 | Application Routes
