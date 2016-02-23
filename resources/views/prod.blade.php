@@ -14,6 +14,7 @@
                 <!-- Products page doesn't need anchor -->
                     <img class="img-responsive" src="{{$cat->image}}" alt="">
                     <h3>{{$cat->title}}</h3>
+                    <!-- full comments on main blade -->
                     {!! Form::open(['method' => 'POST', 'route' => ['itemdeath', $cat->id]]) !!}
                     {!! csrf_field() !!}
                     {!! method_field('DELETE') !!}

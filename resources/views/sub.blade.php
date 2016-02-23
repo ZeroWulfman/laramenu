@@ -16,6 +16,7 @@
                     <img class="img-responsive" src="{{$cat->image}}" alt="">
                     <h3>{{$cat->title}}</h3>
                     </a>
+                    <!-- full comments on main blade -->
                     {!! Form::open(['method' => 'POST', 'route' => ['subdeath', $cat->id], 'onsubmit' => 'return ConfirmDelete()']) !!}
                     {!! csrf_field() !!}
                     {!! method_field('DELETE') !!}

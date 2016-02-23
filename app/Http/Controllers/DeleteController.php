@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// add ability to use redirect as command
 use Illuminate\Support\Facades\Redirect;
 
 use DB;
@@ -18,7 +19,7 @@ use App\Http\Controllers\Controller;
 class DeleteController extends Controller
 {
     public function cdestroy(Product $id) {
-
+        // Since it's three tables and there is nothing connecting Products to Categories, this code pulls up the correct subcats and does a for loop through them to delete al associated products.
         $sub=App\SubCategory::where('cat_id', $id->id)->get();
         for($i=0;$i<sizeof($sub);$i++) {
             $item[$i]=App\Product::where('sub_id', $sub[$i]->id)->delete();
