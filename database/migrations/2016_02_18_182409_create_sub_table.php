@@ -108,8 +108,8 @@ class CreateSubTable extends Migration
             ],
             [
               "cat_id"=> "10",
-              "title"=> "You Know You Love Them!"
-              "image"=> "/img/ikea/smores.jpg",
+              "title"=> "You Know You Love Them!",
+              "image"=> "/img/ikea/smores.jpg"
             ],
             [
               "cat_id"=> "11",
