@@ -9,10 +9,10 @@ class CatSubcat extends Model
     protected $table = 'catsubcats';
 
     public static function maincat() {
-        return $maincat = CatSubcat::where('cat_call','')->get();
+        return CatSubcat::where('cat_call','')->get();
     }
     public static function subcat(CatSubcat $id) {
-        return $subcat = CatSubcat::where('cat_call', $id->id)->get();
+        return CatSubcat::where('cat_call', $id->id)->get();
     }
     public static function subdeath(CatSubcat $id) {
         MenuItem::where('sub_call', $id->sub_id)->delete();
