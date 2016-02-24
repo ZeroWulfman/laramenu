@@ -20,7 +20,7 @@
                     {!! Form::open(['method' => 'POST', 'route' => ['subdeath', $cat->id], 'onsubmit' => 'return ConfirmDelete()']) !!}
                     {!! csrf_field() !!}
                     {!! method_field('DELETE') !!}
-                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', array('type' => 'submit', 'class' => 'btn btn-danger delete')) !!}
+                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i> Delete', array('type' => 'submit', 'class' => 'btn btn-danger delete')) !!}
                     {!! Form::close() !!}
             </div>
 

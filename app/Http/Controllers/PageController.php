@@ -17,18 +17,15 @@ use App\Http\Controllers\Controller;
 class PageController extends Controller
 {
     public function main() {
-        $maincat = App\CatSubcat::where('cat_call','')->get();
-        // return view('main', compact('maincat'));
+        $maincat = App\CatSubcat::maincat();
         return view('main', compact('maincat'));
     }
     public function sub(Catsubcat $id) {
-        //grab items from SubCategories if cat_id = id of category
-        $subcat = App\CatSubcat::where('cat_call', $id->id)->get();
-        return view('sub', compact('id', 'subcat'));
+        $subcat = App\CatSubcat::subcat($id);
+        return view('sub', compact('subcat'));
     }
     public function prod(CatSubcat $id) {
-        //grab items from Products if sub_id = id of subcategory
-        $subcat = App\MenuItem::where('sub_call', $id->sub_id)->get();
-        return view('prod', compact('id', 'subcat'));
+        $product = App\MenuItem::product($id);
+        return view('prod', compact('product'));
     }
 }

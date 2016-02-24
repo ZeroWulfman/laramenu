@@ -21,7 +21,7 @@
                 <!-- creates a csrf token for validation (not relevent at the moment) -->
                 {!! csrf_field() !!}
                 {!! method_field('DELETE') !!}
-                {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', array('type' => 'submit', 'class' => 'btn btn-danger delete')) !!}
+                {!! Form::button('<i class="glyphicon glyphicon-trash"></i> Delete', array('type' => 'submit', 'class' => 'btn btn-danger delete')) !!}
                 {!! Form::close() !!}
         </div>
     @endforeach
